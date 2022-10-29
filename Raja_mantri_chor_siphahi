@@ -1,0 +1,109 @@
+import random
+print("-----------WELCOME TO THE GAME---------")
+score1=score2=score3=score4=0
+p1=input("ENTER FIRST PLAYER NAME:-")
+p2=input("ENTER SECOND PLAYER NAME:-")
+p3=input("ENTER THIRD PLAYER NAME:-")
+p4=input("ENTER FORTH PLAYER NAME:-")
+i=1
+while i<2:
+    random1=random.randint(1,50)
+    random2=random.randint(1,50)
+    random3=random.randint(1,50)
+    random4=random.randint(1,50)
+    if random1%2==0:
+        print(p1,"is Raja")
+        score1+=1000
+        print(p3,"is Sipahi")
+        print(p3,end=" ")
+        ch=input(" FIND THE CHOR")
+        if ch==p2:
+            print(p3,"is right",p2,"is chor")
+            score2+=000
+            score3+=500
+            score4+=800
+        else:
+            print(p3,"is wrong",p2,"is chor")
+            score2+=500
+            score3+=000
+            score4+=800
+    elif random2%2==0:
+        print(p2,"is raja")
+        score2+=1000
+        print(p1,"is Sipahi")
+        print(p1,end=" ")
+        ch=input("FIND THE CHOR")
+        if ch==p4:
+            print(p1,"is right",p4," is chor")
+            score1+=500
+            score3+=800
+            score4+=000
+        else:
+            print(p1,"is wrong",p4,"is chor")
+            score1+=000
+            score3+=800
+            score4+=500
+    elif random3%2==0:
+        print(p3,"is raja")
+        score3+=1000
+        print(p4,"is sipahi")
+        print(p4,end=" ")
+        ch=input("FIND THE CHOR")
+        if ch==p1:
+            print(p4," is right",p1,"is chor")
+            score1+=000
+            score2+=800
+            score4+=500
+        else:
+            print(p4,"is wrong",p1,"is chor")
+            score1+=500
+            score2+=800
+            score4+=000
+    elif random4%2==0:
+        print(p4,"is raja")
+        score4+=1000
+        print(p2,"is sipahi")
+        print(p2,end=" ")
+        ch=input(" FIND THE CHOR")
+        if ch==p1:
+            print(p2,"is right",p1,"is chor")
+            score1+=000
+            score2+=500
+            score3+=800
+        else:
+            print(p2,"is wrong",p1,"is chor")
+            score1+=500
+            score2+=000
+            score3+=800
+    else:
+        print(p2,"is raja")
+        score2+=1000
+        print(p4,"is sipahi")
+        print(p4,end=" ")
+        ch=input(" FIND THE CHOR")
+        if ch==p3:
+            print(p4,"is right",p3,"is chor")
+            score1+=800
+            score3+=000
+            score4+=500
+        else:
+            print(p4,"is wrong",p3,"is chor")
+            score1+=800
+            score3+=500
+            score4+=000
+    print("1. FOR PLAY AGAIN")
+    print("2. FOR EXIT")
+    print("3. FOR SCORE")
+    ch=int(input("ENTER YOUR CHOISE:-"))
+    if ch==1:
+        i-=1
+    elif ch==2:
+        break
+    elif ch==3:
+        print(p1,"score is ",score1)
+        print(p2," score is ",score2)
+        print(p3,"score is ",score3)
+        print(p4,"score is ",score4)
+        break
+    else:
+        print(" invalid choise")
